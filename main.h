@@ -69,9 +69,9 @@ int writePointer(char buffer[], int ind, int length, int width,
 int writeUnsgnd(int is_negative, int ind, char buffer[], int flags,
 		int width, int precision, int size);
 
-int isPrintable(char);
-int appendHexaCode(char, char[], int);
-int isDigit(char);
+int isPrintable(char c);
+int appendHexaCode(char asciiCode, char buffer[], int i);
+int isDigit(char c);
 long int convertSizeNumber(long int num, int size);
 long int convertSizeUnsgnd(unsigned long int num, int size);
 
