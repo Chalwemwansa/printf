@@ -9,14 +9,14 @@
  * Return: width.
  */
 
-int get_width(const char *format, int *z, va_list list)
+int gWidth(const char *format, int *z, va_list list)
 {
 	int curr_z;
 	int width = 0;
 
 	for (curr_z = *z + 1; format[curr_z] != '\0'; curr_z++)
 	{
-		if (is_digit(format[curr_z]))
+		if (isDigit(format[curr_z]))
 		{
 			width *= 10;
 			width += format[curr_z] - '0';

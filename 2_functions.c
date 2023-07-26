@@ -92,7 +92,7 @@ int pHexadecimal(va_list types, char str[],
  * @precision: variable used
  * @size: variable used
  */
-int print_hexa(va_list types, char mTo[], char str[],
+int pHexa(va_list types, char mTo[], char str[],
 			int flag, char fCh, int width, int precision, int size)
 {
 	int i = 1022;

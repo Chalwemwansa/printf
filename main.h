@@ -36,15 +36,15 @@ int pOctal(va_list types, char buffer[], int flags, int width,
 		int precision, int size);
 int pHexadecimal(va_list types, char buffer[], int flags, int width,
 		int precision, int size);
-int printHexaUpper(va_list types, char buffer[], int flags, int width,
+int pHexaUpper(va_list types, char buffer[], int flags, int width,
 		int precision, int size);
-int printHexa(va_list types, char map_to[], char buffer[], int flags,
+int pHexa(va_list types, char map_to[], char buffer[], int flags,
 		char flag_ch, int width, int precision, int size);
 
-int printNonPrintable(va_list types, char buffer[], int flags, int width,
+int pNonPrintable(va_list types, char buffer[], int flags, int width,
 		int precision, int size);
 
-int printPointer(va_list types, char buffer[], int flags, int width,
+int pPointer(va_list types, char buffer[], int flags, int width,
 		int precision, int size);
 
 int gFlag(const char *format, int *i);
@@ -52,10 +52,10 @@ int gWidth(const char *format, int *i, va_list list);
 int gPrecision(const char *format, int *i, va_list list);
 int gSize(const char *format, int *i);
 
-int printReverse(va_list types, char buffer[], int flags, int width,
+int pReverse(va_list types, char buffer[], int flags, int width,
 		int precision, int size);
 
-int printRot13string(va_list types, char buffer[], int flags, int width,
+int pRot13string(va_list types, char buffer[], int flags, int width,
 		int precision, int size);
 
 int handleWriteChar(char c, char buffer[], int flags, int width,

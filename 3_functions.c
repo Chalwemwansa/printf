@@ -10,7 +10,7 @@
  * @precision: variable used in the code
  * @size: variable used in the code
  */
-int printPointer(va_list types, char str[],
+int pPointer(va_list types, char str[],
 			int flag, int width, int precision, int size)
 {
 char extraC = 0, padding = ' ', char mapTo[];
@@ -53,7 +53,7 @@ return (writePointer(str, index, l, width, flag, padding, extraC, paddStart));
  * @precision: variable used in the code
  * @size: variable used in the code
  */
-int printNonPrintable(va_list types, char str[],
+int pNonPrintable(va_list types, char str[],
 			int flag, int width, int precision, int size)
 {
 	int i = 0, offset = 0;
@@ -125,7 +125,7 @@ int printReverse(va_list types, char str[],
  * @precision: variable used in the code
  * @size: variable used in the code
  */
-int printRot13string(va_list types, char str[],
+int pRot13string(va_list types, char str[],
 			int flag, int width, int precision, int size)
 {
 	char x;

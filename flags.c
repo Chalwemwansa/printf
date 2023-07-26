@@ -7,7 +7,7 @@
  * Return: Flags on success
  */
 
-int get_flags(const char *format, int *p)
+int gFlags(const char *format, int *p)
 {
 	/* - + 0 # ' ' */
 	/* 1 2 4 8  16 */

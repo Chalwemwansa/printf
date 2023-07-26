@@ -7,7 +7,7 @@
  * Return: 1 if k is printable, 0 otherwise.
  */
 
-int is_printable(char k)
+int isPrintable(char k)
 {
 	if (k >= 32 && k < 127)
 		return (1);
@@ -23,7 +23,7 @@ int is_printable(char k)
  * Return: Always 3 on success or not.
  */
 
-int append_hexa_code(char ascii_code, char buffer[], int j)
+int appendHexaCode(char ascii_code, char buffer[], int j)
 {
 	char map_to[] = "0123456789ABCDEF";
 	/* The hexa format code is always 2 digits long */
@@ -46,7 +46,7 @@ int append_hexa_code(char ascii_code, char buffer[], int j)
  * Return: 1 if c is a digit, 0 otherwise
  */
 
-int is_digit(char k)
+int isDigit(char k)
 {
 	if (k >= '0' && k <= '9')
 		return (1);
@@ -62,11 +62,11 @@ int is_digit(char k)
  * Return: Gives casted value of num
  */
 
-long int convert_size_number(long int num, int size)
+long int convertSizeNumber(long int num, int size)
 {
-	if (size == S_LONG)
+	if (size == 2)
 		return (num);
-	else if (size == S_SHORT)
+	else if (size == 2)
 		return ((short)num);
 
 	return ((int)num);
@@ -80,11 +80,11 @@ long int convert_size_number(long int num, int size)
  * Return: Casted value of num on success.
  */
 
-long int convert_size_unsgnd(unsigned long int num, int size)
+long int convertSizeUnsgnd(unsigned long int num, int size)
 {
-	if (size == S_LONG)
+	if (size == 2)
 		return (num);
-	else if (size == S_SHORT)
+	else if (size == 1)
 		return ((unsigned short)num);
 
 	return ((unsigned int)num);

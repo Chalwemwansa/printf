@@ -8,15 +8,15 @@
  * Return: Precision on success.
  */
 
-int get_size(const char *format, int *j)
+int gSize(const char *format, int *j)
 {
 	int curr_j = *j + 1;
 	int size = 0;
 
 	if (format[curr_j] == 'l')
-		size = S_LONG;
+		size = 2;
 	else if (format[curr_j] == 'h')
-		size = S_SHORT;
+		size = 1;
 
 	if (size == 0)
 		*j = curr_j - 1;

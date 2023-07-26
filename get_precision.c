@@ -9,7 +9,7 @@
  * Return: Precision on success.
  */
 
-int get_precision(const char *format, int *k, va_list list)
+int gPrecision(const char *format, int *k, va_list list)
 {
 	int curr_k = *k + 1;
 	int precision = -1;
@@ -21,7 +21,7 @@ int get_precision(const char *format, int *k, va_list list)
 
 	for (curr_k += 1; format[curr_k] != '\0'; curr_k++)
 	{
-		if (is_digit(format[curr_k]))
+		if (isDigit(format[curr_k]))
 		{
 			precision *= 10;
 			precision += format[curr_k] - '0';
