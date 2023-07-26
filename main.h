@@ -3,6 +3,13 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <stdarg.h>
+#include <stdlib.h>
+
+#define F_MINUS (1 << 0)
+#define F_PLUS (1 << 1)
+#define F_ZERO (1 << 2)
+#define F_HASH (1 << 3)
+#define F_SPACE (1 << 4)
 
 /**
  * struct fmt - the structure we are using in our codes
