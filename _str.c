@@ -8,16 +8,16 @@
 
 int str(va_list string)
 {
-	int len;
+	int l;
 	char *str;
 
 	str = va_arg(string, char *);
 
 	if (str == NULL)
 		str = "(null)";
-	len = 0;
+	l = 0;
 
-	while (str[len] != '\0')
-		len = len + _putchar(str[len]);
-	return (len);
+	while (str[l] != '\0')
+		l = l + _putchar(str[l]);
+	return (l);
 }

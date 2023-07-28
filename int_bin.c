@@ -9,9 +9,9 @@
 int _bin(va_list bin)
 {
 	int count = 0, i;
-	int *arr;
+	int *ar;
 	unsigned int n = va_arg(bin, unsigned int);
-	unsigned int tmp = n;
+	unsigned int p = n;
 
 	while (n / 2 != 0)
 	{
@@ -19,21 +19,21 @@ int _bin(va_list bin)
 		count++;
 	}
 	count++;
-	arr = malloc(count * sizeof(int));
-	if (arr == NULL)
+	ar = malloc(count * sizeof(int));
+	if (ar == NULL)
 	{
-		free(arr);
+		free(ar);
 		return (0);
 	}
 	for (i = 0; i < count; i++)
 	{
-		arr[i] = tmp % 2;
-		tmp /= 2;
+		ar[i] = p % 2;
+		p /= 2;
 	}
 	for (i = count - 1; i >= 0; i--)
 	{
-		_putchar(arr[i] + '0');
+		_putchar(ar[i] + '0');
 	}
-	free(arr);
+	free(ar);
 	return (count);
 }

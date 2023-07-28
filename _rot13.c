@@ -8,10 +8,10 @@
 
 int _rot13(va_list rot)
 {
-	int a, count;
+	int a, c;
 	char *s;
 
-	a = count = 0;
+	a = c = 0;
 	s = va_arg(rot, char *);
 
 	if (s == NULL)
@@ -23,13 +23,13 @@ int _rot13(va_list rot)
 		{
 			if ((s[a] >= 'n' && s[a] <= 'z') ||
 			    (s[a] >= 'N' && s[a] <= 'Z'))
-				count = count + _putchar(s[a] - 13);
+				c = c + _putchar(s[a] - 13);
 			else
-				count = count + _putchar(s[a] + 13);
+				c = c + _putchar(s[a] + 13);
 		}
 		else
-			count = count + _putchar(s[a]);
+			c = c + _putchar(s[a]);
 		a++;
 	}
-	return (count);
+	return (c);
 }

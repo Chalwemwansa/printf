@@ -9,18 +9,18 @@
 int _ui(va_list unsign)
 {
 	unsigned int n;
-	int expo = 1;
-	int len = 0;
+	int e = 1;
+	int l = 0;
 
 	n = va_arg(unsign, unsigned int);
 
-	while (n / expo > 9)
-		expo *= 10;
-	while (expo != 0)
+	while (n / e > 9)
+		e *= 10;
+	while (e != 0)
 	{
-		len = len + _putchar(n / expo + '0');
-		n = n % expo;
-		expo = expo / 10;
+		l = l + _putchar(n / e + '0');
+		n = n % e;
+		e = e / 10;
 	}
-	return (len);
+	return (l);
 }
