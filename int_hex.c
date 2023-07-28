@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _hex_str - function converts the number from base 10 to hex
+ * _hex_str - function converts the number from base 10 to hex.
  * @n: gives the number to be converted.
  * @hex: gives base of 16 being passed.
  * @alpha: Char 'A' to 'F' or 'a' to 'f'.
