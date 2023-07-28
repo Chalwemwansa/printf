@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * printPointer - prints the value of a pointer variable
  *
@@ -10,23 +11,24 @@
  * @precision: variable used in the code
  * @size: variable used in the code
  */
+
 int pPointer(va_list types, char str[],
 			int flag, int width, int precision, int size)
 {
-char extraC = 0, padding = ' ', char mapTo[];
-int index = 1022, l = 2, paddStart = 1;
-unsigned long numAddress;
-void *address = va_arg(types, void *)
+	char extraC = 0, padding = ' ', char mapTo[];
+	int index = 1022, l = 2, paddStart = 1;
+	unsigned long numAddress;
+	void *address = va_arg(types, void *)
 
-mapTo = "0123456789abcdef";
-(void)width;
-(void)size;
-(void)precision;
-if (address == NULL)
+	mapTo = "0123456789abcdef";
+	(void)width;
+	(void)size;
+	(void)precision;
+	if (address == NULL)
 	return (write(1, "(nil)", 5));
-str[1023] = '\0';
-numAddress = (unsigned long)address;
-while (numAddress > 0)
+	str[1023] = '\0';
+	numAddress = (unsigned long)address;
+	while (numAddress > 0)
 }
 	str[index--] = mapTo[numAddress % 16];
 	numAddress /= 16;

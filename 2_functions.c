@@ -16,7 +16,7 @@ int pUnsigned(va_list types, char str[],
 	int i = 1022;
 	unsigned long int num;
 
-	num = convertSizeUnsgnd(va_arg(types, unsigned long int), size);
+	num = convert_Size_Unsgnd(va_arg(types, unsigned long int), size);
 	if (num == 0)
 		str[i--] = '0';
 	str[1023] = '\0';
@@ -26,7 +26,7 @@ int pUnsigned(va_list types, char str[],
 		num /= 10;
 	}
 	i++;
-	return (writeUnsgnd(0, i, str, flag, width, precision, size));
+	return (write_Unsgnd(0, i, str, flag, width, precision, size));
 }
 /**
  * pOctal - prints number in octal
@@ -48,7 +48,7 @@ unsigned long int num, init_num;
 num = va_arg(types, unsigned long int);
 init_num = num;
 (void)width;
-num = convertSizeUnsgnd(num, size);
+num = convert_Size_Unsgnd(num, size);
 if (num == 0)
 	str[i--] = '0';
 str[1023] = '\0';
@@ -60,7 +60,7 @@ num /= 8;
 if (flag & 8 && init_num != 0)
 	str[i--] = '0';
 i++;
-return (writeUnsgnd(0, i, str, flag, width, precision, size));
+return (write_Unsgnd(0, i, str, flag, width, precision, size));
 }
 /**
  * pHexadecimal - prints a number into hexadecimal
@@ -101,7 +101,7 @@ int pHexa(va_list types, char mTo[], char str[],
 	num = va_arg(types, unsigned long int);
 	initNum = num;
 	(void)width;
-	num = convertSizeUnsgnd(num, size);
+	num = convert_Size_Unsgnd(num, size);
 	if (num == 0)
 		str[i--] = '0';
 	str[1023] = '\0';
@@ -116,5 +116,5 @@ int pHexa(va_list types, char mTo[], char str[],
 		str[i--] = '0';
 	}
 	i++;
-	return (writeUnsgnd(0, i, str, flag, width, precision, size));
+	return (write_Unsgnd(0, i, str, flag, width, precision, size));
 }

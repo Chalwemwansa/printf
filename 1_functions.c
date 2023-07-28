@@ -1,4 +1,7 @@
 #include "main.h"
+#include <stdarg.h>
+#include <stdio.h>
+
 /**
  * pChar - prints a character to std output
  *
@@ -16,7 +19,7 @@ int pChar(va_list types, char str[],
 	char c;
 
 	c = va_arg(types, int);
-	return (hWriteChar(c, str, flag, width, precision, size));
+	return (handleWriteChar(c, str, flag, width, precision, size));
 }
 /**
  * pString - prints a string
@@ -104,7 +107,7 @@ int pInt(va_list types, char str[],
 {
 int i = 1022;
 int j = 0;
-long int n = va_arg{types, long int};
+long int n = va_arg(types, long int);
 unsigned long int num;
 
 n = convertSizeNumber(n, size);
@@ -125,7 +128,7 @@ while (num > 0)
 	num /= 10;
 }
 i++;
-return (wNumber(j, i, str, flag, width, precision, size));
+return (writeNumber(j, i, str, flag, width, precision, size));
 }
 /**
  * pBinary - prints a given  number in binary
